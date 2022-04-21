@@ -10,6 +10,9 @@ def main():
         for line in raw:
             if line == '\n':
                 space += 1
+                continue
+            if "tickets" in line:
+                continue
 
             if space == 0:
                 temp = line.strip().split()
@@ -21,14 +24,12 @@ def main():
             elif space == 1:
                 temp = line.strip().split(",")
                 for part in temp:
-                    if part.isdigit():
-                        my_ticket.append(part)
+                    my_ticket.append(part)
             else:
                 temp = line.strip().split(",")
                 nearby_ticket = []
                 for part in temp:
-                    if part.isdigit():
-                        nearby_ticket.append(part)
+                    nearby_ticket.append(part)
                 nearby_tickets.append(nearby_ticket)
 
     errors = []
