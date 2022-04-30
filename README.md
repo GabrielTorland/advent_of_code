@@ -23,7 +23,7 @@ git clone git@github.com:GabrielTorland/advent_of_code.git
 * Twitter: [@GabrielTorland](https://twitter.com/GabrielTorland)
 * GitHub: [@GabrielTorland](https://github.com/GabrielTorland)
 * LinkedIn: [@gabriel-torland-37b75a230](https://linkedin.com/in/gabriel-torland-37b75a230)
-* youtube: https://www.youtube.com/channel/UC1yI-ByA5TvXE0OUcjDlbaA
+* youtube: [@Olepedersen](https://www.youtube.com/channel/UC1yI-ByA5TvXE0OUcjDlbaA)
 
 ## Show your support
 
