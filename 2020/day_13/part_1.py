@@ -8,12 +8,7 @@ def parse():
 def earliest_departure(data):
     delta = dict()
     for mod_ in data[1]:
-        i = 0
-        while True:
-            if (data[0] + i) % mod_ == 0:
-                delta[i] = mod_
-                break
-            i += 1
+        delta[mod_ - (data[0] % mod_)] = mod_ 
     return delta
 result = earliest_departure(parse())
 print(min(result.keys())*result[min(result.keys())])
