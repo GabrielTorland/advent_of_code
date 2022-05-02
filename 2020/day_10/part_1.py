@@ -1,7 +1,13 @@
 
+import sys
+
+def parse():
+    infile = sys.argv[1] if len(sys.argv) > 1 else 'input.txt'
+    with open(infile, 'r') as f:
+        return {int(line) for line in f.read().splitlines()}
+
 def main():
-    with open('input.txt', 'r') as raw:
-        joltages = {int(line) for line in raw.read().splitlines()}
+    joltages = parse()
 
     adapter_count = {1: [],
                      3: []}
@@ -16,4 +22,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
 
