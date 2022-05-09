@@ -15,7 +15,7 @@ def simulate_games_(*args):
     p1_wins, p2_wins = 0, 0
     
     # r is the sum of the three dieces ad f is the repetition factor.
-    # I found this combinations by hand :D
+    # I found these permutations by hand :D
     for r, f in [(3,1),(4,3),(5,6),(6,7),(7,6),(8,3),(9,1)]:
         next_pos = (args[0]+r)%10
         w_2, w_1 = simulate_games_(args[2], args[3], next_pos, args[1]+next_pos+1)
