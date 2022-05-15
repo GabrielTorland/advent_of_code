@@ -70,10 +70,10 @@ if __name__ == '__main__':
         state, *cords = pattern.match(line).groups()
         x1,x2, y1,y2, z1,z2 = map(int, cords)
         cuboid = (x1,y1,z1, x2+1,y2+1,z2+1)
-        if sum([1 if -50 <= c <= 50 else 0 for c in cuboid]) != 6: continue
         if state == "on":
             total += volume(rem_inter([cuboid], [cuboids[i] for i in ix.intersection(cuboid)]))
         ix.insert(len(cuboids), cuboid)
         cuboids.append(cuboid)
-    print("Part 1: ", total)
+    print("Part 2: ", total)
         
+
