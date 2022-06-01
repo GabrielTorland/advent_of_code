@@ -1,8 +1,6 @@
 import sys, math, re, random
 from collections import defaultdict, Counter
 
-from numpy import imag
-
 class Tile:
     def __init__(self, id):
         self.id = id
@@ -450,24 +448,24 @@ def multiply_corners(corner_tiles):
         p1 *= x.id
     return p1
 
+if __name__ == "__main__":
+    # Construct image
+    tiles, sides_map = parse()
+    tiles_map = {tile.id: tile for tile in tiles}
+    corner_tiles = find_all_distinct_neighboors(tiles, sides_map, tiles_map)
+    corner_tile = random.choice(corner_tiles)
+    flip_tiles(corner_tile, 0, corner_tile, int(math.sqrt(len(tiles))))
 
-# Construct image
-tiles, sides_map = parse()
-tiles_map = {tile.id: tile for tile in tiles}
-corner_tiles = find_all_distinct_neighboors(tiles, sides_map, tiles_map)
-corner_tile = random.choice(corner_tiles)
-flip_tiles(corner_tile, 0, corner_tile, int(math.sqrt(len(tiles))))
+    # Store image
+    image_list = create_image_list(corner_tile, int(math.sqrt(len(tiles))))
+    store_image(image_list, "image.txt")
+    remove_boarders(tiles)
+    image_list = create_image_list(corner_tile, int(math.sqrt(len(tiles))))
 
-# Store image
-image_list = create_image_list(corner_tile, int(math.sqrt(len(tiles))))
-store_image(image_list, "image.txt")
-remove_boarders(tiles)
-image_list = create_image_list(corner_tile, int(math.sqrt(len(tiles))))
+    # Find seamonsters
+    image_list = count_seamonsters(image_list)
+    free_water = Counter([c for row in image_list for c in row])['#']
 
-# Find seamonsters
-image_list = count_seamonsters(image_list)
-free_water = Counter([c for row in image_list for c in row])['#']
+    print("part 1:", multiply_corners(corner_tiles))
 
-print("part 1:", multiply_corners(corner_tiles))
-
-print("Part 2:", free_water)
+    print("Part 2:", free_water)
