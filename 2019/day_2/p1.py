@@ -14,7 +14,7 @@ def parse():
         return input
 
 def part_1(input):
-    i = 0
+    i = 0   
     while input[i] != 99:
         if input[i] == 1:
             input[input[i+3]] = input[input[i+1]] + input[input[i+2]]
