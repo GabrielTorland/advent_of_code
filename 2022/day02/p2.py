@@ -1,6 +1,14 @@
 import sys
 
 def win(o):
+    """_summary_
+        Returns the score for winning against o
+    Args:
+        o (string) : opponent's move
+
+    Returns:
+        int : score 
+    """    
     match o:
         case "A":
             return 8
@@ -9,6 +17,14 @@ def win(o):
         case "C":
             return 7 
 def lose(o):
+    """_summary_
+        Returns the score for losing to o
+    Args:
+        o (string): opponent's move
+
+    Returns:
+        int: score 
+    """    
     match o:
         case "A":
             return 3
@@ -19,6 +35,15 @@ def lose(o):
 
 
 def score(i , o):
+    """_summary_
+        Calculates the score for a given instruction 
+    Args:
+        i (string):  outcome
+        o (string): opponent's move 
+
+    Returns:
+        int : score 
+    """    
     t = {"A": 1, "B": 2, "C": 3}
     s = 0
     if i ==  "X":
