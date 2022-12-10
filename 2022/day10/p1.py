@@ -8,15 +8,13 @@ def calc_signal_strengths(instructions):
 		match i.split():
 			case ["noop", *_]:
 				cycles += 1
-				if cycles in [20, 60, 100, 140, 180, 220]: sign_strengths.append(X*cycles)
+				if (cycles-20) % 40 == 0: sign_strengths.append(X*cycles)
 			case ["addx", val]:
 				X += int(val)
 				cycles += 1
-				if cycles in [20, 60, 100, 140, 180, 220]:
-					sign_strengths.append((X-int(val))*cycles)
+				if (cycles-20) % 40 == 0: sign_strengths.append((X-int(val))*cycles)
 				cycles += 1
-				if cycles in [20, 60, 100, 140, 180, 220]:
-					sign_strengths.append(X*cycles)
+				if (cycles-20) % 40 == 0:sign_strengths.append(X*cycles)
 
 	return sign_strengths
 
