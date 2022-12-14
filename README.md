@@ -1,6 +1,8 @@
 <h1 align="center">Advent of Code :santa:</h1>
 
 
+## Description
+
 This repo contains my solutions for the Advent of Code programming challenges.
 
 Advent of Code is an annual event where a series of programming challenges are released on the first of December, with a new challenge being released each day leading up to Christmas. The challenges range from simple puzzles to complex algorithms, and are designed to be solved using a variety of programming languages.
@@ -17,8 +19,6 @@ Happy coding!
     <img alt="Twitter: GabrielTorland" src="https://img.shields.io/twitter/follow/GabrielTorland.svg?style=social" />
   </a>
 </p>
-
-> My solutions to advent of code
 
 ## Author
 
