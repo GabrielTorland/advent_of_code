@@ -1,5 +1,13 @@
 <h1 align="center">Advent of Code :santa:</h1>
 
+<p>
+  <a href="https://www.youtube.com/watch?v=p7YXXieghto" target="_blank">
+    <img alt="License: unlicensed" src="https://img.shields.io/badge/License-unlicensed-yellow.svg" />
+  </a>
+  <a href="https://twitter.com/GabrielTorland" target="_blank">
+    <img alt="Twitter: GabrielTorland" src="https://img.shields.io/twitter/follow/GabrielTorland.svg?style=social" />
+  </a>
+</p>
 
 ## Description
 
@@ -10,15 +18,6 @@ Advent of Code is an annual event where a series of programming challenges are r
 I'm using this event as an opportunity to improve my coding skills and to have fun solving these challenges. I'll be posting my solutions here for anyone who wants to see how I approached each problem.
 
 Happy coding!
-
-<p>
-  <a href="https://www.youtube.com/watch?v=p7YXXieghto" target="_blank">
-    <img alt="License: unlicensed" src="https://img.shields.io/badge/License-unlicensed-yellow.svg" />
-  </a>
-  <a href="https://twitter.com/GabrielTorland" target="_blank">
-    <img alt="Twitter: GabrielTorland" src="https://img.shields.io/twitter/follow/GabrielTorland.svg?style=social" />
-  </a>
-</p>
 
 ## Author
 
