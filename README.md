@@ -1,4 +1,5 @@
-<h1 align="center">Welcome to advent_of_code 👋</h1>
+<h1 align="center">Advent of Code :santa:</h1>
+
 <p>
   <a href="https://www.youtube.com/watch?v=p7YXXieghto" target="_blank">
     <img alt="License: unlicensed" src="https://img.shields.io/badge/License-unlicensed-yellow.svg" />
@@ -8,13 +9,15 @@
   </a>
 </p>
 
-> My solutions to advent of code
+## Description
 
-## Install
+This repo contains my solutions for the Advent of Code programming challenges.
 
-```sh
-git clone git@github.com:GabrielTorland/advent_of_code.git
-```
+Advent of Code is an annual event where a series of programming challenges are released on the first of December, with a new challenge being released each day leading up to Christmas. The challenges range from simple puzzles to complex algorithms, and are designed to be solved using a variety of programming languages.
+
+I'm using this event as an opportunity to improve my coding skills and to have fun solving these challenges. I'll be posting my solutions here for anyone who wants to see how I approached each problem.
+
+Happy coding!
 
 ## Author
 
