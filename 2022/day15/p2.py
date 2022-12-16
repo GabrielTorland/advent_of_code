@@ -1,7 +1,6 @@
 from aocd import get_data
 import re
 
-
 def parse(raw):
 	scanners = []
 	beacons = []
@@ -32,21 +31,21 @@ def merge(row_ranges):
 			new_row_ranges[i] = Range(new_row_ranges[i].start, rng.end)
 	return new_row_ranges	
 			
-def calc_euclidean_distance(a, b):
+def calc_manhattan_distance(a, b):
 	return abs(a[0] - b[0]) + abs(a[1] - b[1])
 
 def update_ranges(ranges, scanner, beacon, n):
-	euc_dist = calc_euclidean_distance(scanner, beacon)
+	manhattan_dist = calc_manhattan_distance(scanner, beacon)
 	
-	top = (scanner[1] - euc_dist) if (scanner[1] - euc_dist) >= 0 else 0
-	d = euc_dist - abs(top - scanner[1])
+	top = (scanner[1] - manhattan_dist) if (scanner[1] - manhattan_dist) >= 0 else 0
+	d = manhattan_dist - abs(top - scanner[1])
 	for i in range(top, scanner[1]+1):
 		ranges[i].append(Range(scanner[0] - d if (scanner[0] - d) >= 0 else 0, scanner[0] + d if (scanner[0] + d) <= n else n))
 		ranges[i] = merge(ranges[i])
 		d += 1
 
-	d = euc_dist - 1	
-	for i in range(scanner[1] + 1, (scanner[1] + euc_dist+1) if (scanner[1] + euc_dist+1) <= n+1 else n+1):
+	d = manhattan_dist - 1	
+	for i in range(scanner[1] + 1, (scanner[1] + manhattan_dist+1) if (scanner[1] + manhattan_dist+1) <= n+1 else n+1):
 		ranges[i].append(Range(scanner[0] - d if (scanner[0] - d) >= 0 else 0, scanner[0] + d if (scanner[0] + d) <= n else n))
 		ranges[i] = merge(ranges[i])
 		d -= 1
