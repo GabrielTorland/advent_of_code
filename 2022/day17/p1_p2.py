@@ -1,5 +1,6 @@
 from aocd import get_data
 import numpy as np
+import matplotlib.pyplot as plt
 
 class Pile:
 	def __init__(self, rounds) -> None:
@@ -96,13 +97,13 @@ def simulate(instructions, rounds):
 			rock.y -= 1
 
 		pile.draw(rock)
-		pile.height = rock.height if rock.height > pile.height else pile.height 
+		pile.height = rock.height if rock.height > pile.height else pile.height
 
 		i = (i+1) % n
 		count += 1
 		rock = rocks[i]
 		rock.update_pos(pile.height)
-	return pile.height + 1
+	return pile.height + 1 
 
 
 
@@ -110,5 +111,12 @@ def simulate(instructions, rounds):
 if __name__ == '__main__':
 	instructions = get_data(day=17, year=2022).strip()
 	print("Part 1: ", simulate(instructions, 2022)) # 3168
-	print("Part 2: ", simulate(instructions, 1000000000000))
-	
+	print("Part 2:", ((1000000000000-1706)//1700)*2642 + 2659 + 305) # 1554117647070
+
+# part 2
+# not feasible to simulate
+# there was a pattern after the first cycle of instructions
+# the first cycle required 1706 steps and increased the height by 2659
+# each cycle after the first cycle required 1700 steps and increased the height by 2642
+# there was a remainder of 194 rocks after all the complete cycles, which increased the height by 305
+# the result could therefore be calculated manually as shown above
