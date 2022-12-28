@@ -85,4 +85,4 @@ if __name__ == '__main__':
 	raw = get_data(day=23, year=2022)
 	grid = parse(raw)
 	grid, k = simulate(grid)
-	print("Part 1: ", k) # 965
+	print("Part 2: ", k) # 965
