@@ -19,15 +19,6 @@ I'm using this event as an opportunity to improve my coding skills and to have f
 
 Happy coding!
 
-## Author
-
-👤 **Gabriel Torland**
-
-* Twitter: [@GabrielTorland](https://twitter.com/GabrielTorland)
-* GitHub: [@GabrielTorland](https://github.com/GabrielTorland)
-* LinkedIn: [@gabriel-torland-37b75a230](https://linkedin.com/in/gabriel-torland-37b75a230)
-* youtube: [@Olepedersen](https://www.youtube.com/channel/UC1yI-ByA5TvXE0OUcjDlbaA)
-
 ## Show your support
 
 Give a ⭐️ if this project helped you!
