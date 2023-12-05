@@ -50,3 +50,4 @@ test.in
 cmake-build-debug
 .idea
 input.txt
+test.txt
