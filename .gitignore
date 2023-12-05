@@ -49,3 +49,4 @@ dist/**
 test.in
 cmake-build-debug
 .idea
+input.txt
