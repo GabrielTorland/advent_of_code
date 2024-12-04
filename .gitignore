@@ -52,3 +52,4 @@ cmake-build-debug
 input.txt
 test.txt
 target/
+.vscode/*
