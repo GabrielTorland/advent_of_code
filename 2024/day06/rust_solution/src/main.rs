@@ -1,6 +1,5 @@
 use std::collections::HashSet;
 use std::fs;
-
 fn parse_input(input_file: &str) -> Vec<Vec<char>> {
     let raw_data = fs::read_to_string(input_file).expect("Error reading file");
     let mut map_2d: Vec<Vec<char>> = Vec::new();
@@ -184,7 +183,7 @@ fn p2(
 }
 
 fn main() {
-    let input_file = "input.txt";
+    let input_file = "../input.txt";
     let map_2d = parse_input(&input_file);
     let num_rows = map_2d.len();
     let num_cols = map_2d[0].len();
