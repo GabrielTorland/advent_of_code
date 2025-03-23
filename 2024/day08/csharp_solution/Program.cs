@@ -1,12 +1,17 @@
 ﻿namespace Day08;
 
+using System.IO;
+using System;
 using System.Numerics;
+using System.Collections;
 using System.Collections.Immutable;
 
 using Map = System.Collections.Immutable.ImmutableDictionary<System.Numerics.Complex, char>;
 
+
 class Solution
 {
+
     public int Part1(string inputFile) => GetUniquePositions(inputFile, GetAntinodes1).Count();
     public int Part2(string inputFile) => GetUniquePositions(inputFile, GetAntinodes2).Count();
     Map GetMap(string inputFile)
