@@ -1,0 +1,7 @@
+*.csproj
+GlobalUsings.cs
+Inputs/
+Program.cs
+bin/
+obj/
+
