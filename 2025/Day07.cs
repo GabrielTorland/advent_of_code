@@ -74,6 +74,36 @@ public class Day07 : BaseDay
         return timelines;
     }
 
+public ValueTask<string> TrashP1()
+    {
+        var startPosition = (0, _map[0].IndexOf('S'));
+        var beams = new HashSet<int>{ startPosition.Item2 };
+        var splits = 0;
+
+        for (var i = 0; i < _map.Length; i++)
+        {
+            for (var j = 0; j < _map[i].Length; j++)
+            {
+                if (_map[i][j] == '^' && beams.Contains(j))
+                {
+                    beams.Remove(j);
+                    if (j-1 >= 0)
+                    {
+                        beams.Add(j-1);
+                    }
+
+                    if (j+1 < _map[i].Length)
+                    {
+                        beams.Add(j+1);
+                    }
+                    splits++;
+                }
+            }
+        }
+
+        return ValueTask.FromResult(splits.ToString());
+    }
+
     public ValueTask<string> P1()
     {
         var startPosition = (0, _map[0].IndexOf('S'));
